@@ -52,8 +52,8 @@ managed_services = klipper
 type = git_repo
 path = ~/crowsnest
 origin = https://github.com/mainsail-crew/crowsnest.git
+primary_branch = legacy/v3
 managed_services = crowsnest
-install_script = tools/install.sh
 
 [update_manager sonar]
 type = git_repo
@@ -91,4 +91,13 @@ requirements = requirements.txt
 install_script = install.sh
 managed_services = 
 	octoeverywhere
+
+[update_manager KlipperScreen]
+type = git_repo
+path = ~/KlipperScreen
+origin = https://github.com/jordanruthe/KlipperScreen.git
+env = ~/.KlipperScreen-env/bin/python
+requirements = scripts/KlipperScreen-requirements.txt
+install_script = scripts/KlipperScreen-install.sh
+managed_services = KlipperScreen
 
